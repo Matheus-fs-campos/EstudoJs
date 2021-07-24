@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Mascara Telefone</title>
+    <script type="text/javascript">
+        function mascara(telefone){ 
+            if(telefone.value.length == 0)
+                telefone.value = '+55(' + telefone.value; 
+            if(telefone.value.length == 6)
+                telefone.value = telefone.value + ')'; 
+ 
+            if(telefone.value.length == 12)
+                telefone.value = telefone.value + '-';
+}
+    </script>
+ 
+</head>
+    <body>
+ 
+        Telefone: <input type="text" name="telefone" id="telefone" size="20" maxlength="17" onkeypress="mascara(this)">  
+    </body>
+</html>
