@@ -1,12 +1,11 @@
 
 export class ContaCorrente {
     agencia;
-    cliente;
+    _cliente;
 
 
     _saldo = 0; //inicialização
-
-
+    
     sacar(valor){
         if (this._saldo>=valor){
             this._saldo-=valor;
