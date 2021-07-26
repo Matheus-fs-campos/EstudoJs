@@ -3,29 +3,29 @@
 
 import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./ContaCorrente.js";
-const cliente1 = new Cliente();
-cliente1.nome = "Ricardo";
-cliente1.cpf = 11122233309;
+//const cliente1 = new Cliente();
+//cliente1.nome = "Ricardo";
+//cliente1.cpf = 11122233309;
+const cliente1 = new Cliente("Ricardo", "12345678988");
+const cliente2 = new Cliente("Alice", "42699940877");
 
-const cliente2 = new Cliente();
-cliente2.nome = "Alice";
-cliente2.cpf = 11122244409;
+let numeroDeContas = 0;
 
-const contaCorrenteRicardo = new ContaCorrente();
-contaCorrenteRicardo.agencia = 1001;
-contaCorrenteRicardo.cliente = cliente1;
+const contaCorrenteRicardo = new ContaCorrente(cliente1, 1001);
 
-const contaCorrenteAlice = new ContaCorrente();
-contaCorrenteAlice.agencia = 1001;
-contaCorrenteAlice.cliente = cliente2;
+const contaCorrenteAlice = new ContaCorrente(cliente2, 1001);
+const contaCorrentelbice = new ContaCorrente(cliente2, 1001);
+const contaCorrentelince = new ContaCorrente(cliente2, 1001);
+const contaCorrentelicne = new ContaCorrente(cliente2, 1001);
+const contaCorrentelicve = new ContaCorrente(cliente2, 1001);
+const contaCorrentelivce = new ContaCorrente(cliente2, 1001);
 
-const contaCorrenteJoao = new ContaCorrente();
-contaCorrenteJoao.cliente = new Cliente();
-contaCorrenteJoao.agencia = 1001;
-contaCorrenteJoao.cliente.nome="Joao";
-contaCorrenteJoao.cliente.cpf=12345678900;
 
-console.log(contaCorrenteJoao.cliente);
+console.log(contaCorrenteRicardo);
+console.log("\n");
+console.log(contaCorrenteAlice);
+console.log("\n");
+console.log(ContaCorrente.numeroDeContas);
 
 
 
