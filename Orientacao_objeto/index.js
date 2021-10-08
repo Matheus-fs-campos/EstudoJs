@@ -2,30 +2,27 @@
 //_ usado convenção da comunidade para indicar que aquela propriedade é privada, mesmo q ela não seja de fato
 
 import { Cliente } from "./Cliente.js";
+import { Conta } from "./Conta.js";
 import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaPoupança } from "./ContaPoupança.js";
 //const cliente1 = new Cliente();
 //cliente1.nome = "Ricardo";
 //cliente1.cpf = 11122233309;
 const cliente1 = new Cliente("Ricardo", "12345678988");
-const cliente2 = new Cliente("Alice", "42699940877");
 
 let numeroDeContas = 0;
 
-const contaCorrenteRicardo = new ContaCorrente(cliente1, 1001);
+const contaCorrenteRicardo = new ContaCorrente(0, cliente1, 1001);
 
-const contaCorrenteAlice = new ContaCorrente(cliente2, 1001);
-const contaCorrentelbice = new ContaCorrente(cliente2, 1001);
-const contaCorrentelince = new ContaCorrente(cliente2, 1001);
-const contaCorrentelicne = new ContaCorrente(cliente2, 1001);
-const contaCorrentelicve = new ContaCorrente(cliente2, 1001);
-const contaCorrentelivce = new ContaCorrente(cliente2, 1001);
+const contaPoupanca = new ContaPoupança(50, cliente1, 1001);
 
+contaCorrenteRicardo.depositar(500);
+contaCorrenteRicardo.sacar(100);
 
+console.log(contaPoupanca);
+console.log("\n");
 console.log(contaCorrenteRicardo);
 console.log("\n");
-console.log(contaCorrenteAlice);
-console.log("\n");
-console.log(ContaCorrente.numeroDeContas);
 
 
 
