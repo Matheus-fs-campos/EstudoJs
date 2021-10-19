@@ -5,6 +5,7 @@ import { Cliente } from "./Cliente.js";
 import { Conta } from "./Conta.js";
 import { ContaCorrente } from "./ContaCorrente.js";
 import { ContaPoupança } from "./ContaPoupança.js";
+import { ContaSalario } from "./ContaSalario.js";
 //const cliente1 = new Cliente();
 //cliente1.nome = "Ricardo";
 //cliente1.cpf = 11122233309;
@@ -16,14 +17,22 @@ const contaCorrenteRicardo = new ContaCorrente(0, cliente1, 1001);
 
 const contaPoupanca = new ContaPoupança(50, cliente1, 1001);
 
+const contaSalario = new ContaSalario(cliente1);
+
 contaCorrenteRicardo.depositar(500);
 contaCorrenteRicardo.sacar(100);
-
-console.log(contaPoupanca);
-console.log("\n");
+contaPoupanca.sacar(10);
+//let conta = new Conta(0, cliente1, 1001);
+contaSalario.depositar(100);
+contaSalario.sacar(10);
+//console.log(conta);
+//console.log(contaPoupanca);
+console.log(contaSalario);
+/*console.log("\n");
 console.log(contaCorrenteRicardo);
-console.log("\n");
+console.log("\n");*/
 
+/*contaCorrenteRicardo.teste();*/
 
 
 
